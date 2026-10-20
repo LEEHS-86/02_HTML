@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1001_exercise</title>
+
+    <style>
+            section {
+                border: 1px solid darkslategray;
+                text-align: center;
+                color: tomato;
+                font-weight: bold;
+                font-size: 15px;
+            }
+            header, section, article, aside, footer {
+                border: 1px solid darkslategray;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                padding: 8px;
+            }
+            header {
+                text-align: center;
+                font-weight: bold;
+                font-size: 25px;
+            }
+            main {
+                border: 1px solid darkslategray;
+                text-align: center;
+            }
+            .card-container {
+                display: flex; /* 원하는 간격 (붙이려면 0) */
+                align-items: stretch; /* 자식 요소들의 세로 높이를 가장 긴 쪽에 맞춰 동일하게 늘려줌 (기본값) */
+            }
+            /* 자식 section들 일괄 처리 */
+            .card-container section {
+                flex: 1; /* 1:1 비율로 남은 가로 공간을 균등 분할 (적응형) */
+                min-height: 160px; /* 원하는 최소 높이를 주어 직사각형 모양 유지 */
+
+                /* 박스 내부 텍스트 세로/가로 정중앙 정렬을 원할 경우 (선택) */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                box-sizing: border-box; /* 패딩/테두리가 너비에 포함되도록 설정 */
+            }
+    </style>
+</head>
+<body>
+
+<header>
+<h1><a href="https://www.google.com" target="_blank">HTML DOGS</a></h1>
+    <hr />
+    <nav style="text-align: center">
+        <a href="#">소개</a> |
+        <a href="#">프로그램</a> |
+        <a href="#">게시판</a> |
+        <a href="#">뉴스</a> |
+        <a href="#">문의하기</a>
+    </nav>
+</header>
+<p><span style="font-size: 15px"> HTML DOGS 에 오신걸 환영합니다.</span></p>
+<form>
+    <fieldset>
+        <label>
+            <input type="text" name="id" required minlength="0" maxlength="24" placeholder="검색" size="100" />
+        </label>
+    </fieldset>
+</form>
+
+<main style="padding-bottom: 300px">
+
+        <h2 style="font-size: 15px; text-align: left;">TODAY|오늘의소식</h2>
+
+        <div class="card-container">
+            <section>
+            <p>article : 그 자체로 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>
+            <section>
+            <p>article : 또 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>
+            <section>
+            <p>article : 하나 더 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>            <section>
+            <p>article : 마지막으로 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+        </section>
+        </div>
+        <div class="card-container">
+            <section>
+            <p>article : 그 자체로 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>
+            <section>
+            <p>article : 또 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>
+            <section>
+            <p>article : 하나 더 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>
+            <section>
+            <p>article : 마지막으로 완결된 글 <br />(블로그 글, 뉴스 기사 등)</p>
+            </section>
+        </div>
+
+</main>
+
+</body>
+</html>
